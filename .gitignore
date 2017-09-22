@@ -1,0 +1,5 @@
+.rvmrc
+.ruby-version
+pcptrace-*.gem
+lib/*.so
+tmp/
