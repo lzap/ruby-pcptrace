@@ -12,43 +12,43 @@ http://pcp.io/man/man3/pmdatrace.3.html
 
 == USAGE
 
-require "pcptrace"
+	require "pcptrace"
 
-# reached a point in source code
-PCPTrace::point("a_point"))
+	# reached a point in source code
+	PCPTrace::point("a_point"))
 
-# observation of an arbitrary value
-PCPTrace::obs("an_observation", 130.513))
+	# observation of an arbitrary value
+	PCPTrace::obs("an_observation", 130.513))
 
-# a counter - increasing or decreasing
-PCPTrace::counter("a_counter", 1))
+	# a counter - increasing or decreasing
+	PCPTrace::counter("a_counter", 1))
 
-# time spent in a transaction (or block)
-PCPTrace::begin("a_transaction"))
-# ...
-PCPTrace::end("a_transaction"))
+	# time spent in a transaction (or block)
+	PCPTrace::begin("a_transaction"))
+	# ...
+	PCPTrace::end("a_transaction"))
 
-# transactions must be aborted (e.g. exception)
-#PCPTrace::abort("a_transaction"))
+	# transactions must be aborted (e.g. exception)
+	#PCPTrace::abort("a_transaction"))
 
-# all methods return non-zero code
-result = PCPTrace::counter("a_counter", -5))
-puts("Error: " + PCPTrace::errstr(result)) if result != 0
+	# all methods return non-zero code
+	result = PCPTrace::counter("a_counter", -5))
+	puts("Error: " + PCPTrace::errstr(result)) if result != 0
 
 == RUBY-FRIENDLY API
 
 Little bit more Ruby-friendly wraper:
 
-require 'pcptrace/kernel'
-PCPTrace::setup_kernel(true)
+	require 'pcptrace/kernel'
+	PCPTrace::setup_kernel(true)
 
-pcp_point("a_point")
-pcp_observe("an_observation", 99.9)
-pcp_counter("a_counter", 10)
-pcp_counter("a_counter") # increment by 1
-pcp_measure("a_transaction") do
-  # block of code - properly aborted on exception
-end
+	pcp_point("a_point")
+	pcp_observe("an_observation", 99.9)
+	pcp_counter("a_counter", 10)
+	pcp_counter("a_counter") # increment by 1
+	pcp_measure("a_transaction") do
+	  # block of code - properly aborted on exception
+	end
 
 == REQUIREMENTS
 
@@ -56,11 +56,11 @@ The PCP library and headers.
 
 === Fedora
 
-  $ dnf install ruby-devel pcp pcp-libs-devel
+	$ dnf install ruby-devel pcp pcp-libs-devel
 
 === Debian or Ubuntu
 
-  $ sudo apt-get install noidea todo
+	$ sudo apt-get install noidea todo
 
 == AUTHORS
 
