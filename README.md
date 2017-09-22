@@ -1,6 +1,6 @@
 Ruby bindings for PCP trace PMDA & API
 
-== DESCRIPTION
+# DESCRIPTION
 
 Ruby bindings of:
 
@@ -10,7 +10,7 @@ As easy as that. Visit man page for more info:
 
 http://pcp.io/man/man3/pmdatrace.3.html
 
-== USAGE
+# USAGE
 
 	require "pcptrace"
 
@@ -35,7 +35,7 @@ http://pcp.io/man/man3/pmdatrace.3.html
 	result = PCPTrace::counter("a_counter", -5))
 	puts("Error: " + PCPTrace::errstr(result)) if result != 0
 
-== RUBY-FRIENDLY API
+# RUBY-FRIENDLY API
 
 Little bit more Ruby-friendly wraper:
 
@@ -50,23 +50,23 @@ Little bit more Ruby-friendly wraper:
 	  # block of code - properly aborted on exception
 	end
 
-== REQUIREMENTS
+# REQUIREMENTS
 
 The PCP library and headers.
 
-=== Fedora
+#= Fedora
 
 	$ dnf install ruby-devel pcp pcp-libs-devel
 
-=== Debian or Ubuntu
+#= Debian or Ubuntu
 
 	$ sudo apt-get install noidea todo
 
-== AUTHORS
+# AUTHORS
 
 * Lukas Zapletal
 
-== LICENSE
+# LICENSE
 
 (The MIT License)
 
