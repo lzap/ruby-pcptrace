@@ -54,13 +54,23 @@ Little bit more Ruby-friendly wraper:
 
 The PCP library and headers.
 
-#= Fedora
+## Fedora
 
 	$ dnf install ruby-devel pcp pcp-libs-devel
 
-#= Debian or Ubuntu
+## Debian or Ubuntu
 
 	$ sudo apt-get install noidea todo
+
+# INSTALLATION
+
+Regular rubygem:
+
+	gem install pcptrace
+
+When building from source:
+
+	rake compile
 
 # AUTHORS
 

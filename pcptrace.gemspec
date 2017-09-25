@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.summary = "Ruby bindings for pcptrace (pcp_trace library)"
   s.description = "Ruby bindings for PCP tracing library pcp_trace"
   s.homepage = "https://github.com/lzap/ruby-pcptrace"
-  s.licenses = ["GPLv3"]
+  s.licenses = ["MIT"]
   s.email = "lzap+rpm@redhat.com"
 
   s.files = [
@@ -18,12 +18,11 @@ Gem::Specification.new do |s|
     "lib/pcptrace/kernel.rb",
     "ext/pcptrace/extconf.rb",
     "ext/pcptrace/pcptrace.c",
-    "README.rdoc"
+    "README.md"
   ]
-  s.extra_rdoc_files = ['README.rdoc']
   s.extensions = ["ext/pcptrace/extconf.rb"]
   s.require_paths = ["lib", "ext"]
 
-  s.add_development_dependency 'rake'
-  s.add_development_dependency 'rake-compiler'
+  s.add_development_dependency 'rake', '~> 0'
+  s.add_development_dependency 'rake-compiler', '~> 0'
 end
